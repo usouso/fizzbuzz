@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>はあちゃま</title>
+    </head>
+
+    <body>
+        <div id="textbox">
+            <ul>
+                <li v-for="count in 100">
+
+                    <p v-if="count % 3 == 0 && count % 5 == 0">
+                        はあちゃま
+                    </p>
+
+                    <p v-else-if="count % 3 == 0 ">
+                        はあ
+                    </p>
+
+                    <p v-else-if="count % 5 == 0 ">
+                        ちゃま
+                    </p>
+
+                    <p v-else>
+                        {{count}}
+                    </p>
+
+                </li>
+            </ul>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var textbox = new Vue({
+                el: '#textbox',
+                data: {
+
+                }
+            });
+        </script>
+
+    </body>
+
+</html>
